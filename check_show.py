@@ -3,8 +3,10 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from config import config
 import smtplib
+from datetime import datetime
 
 rows_selector = ".table_dates > tbody > tr"
+now = datetime.now().strftime("%d/%m/%Y %H:%M")
 FROM = config["sender"]
 TO = config["recipients"]
 password = config["password"]
@@ -12,9 +14,12 @@ body = config["body"]
 subject = config["subject"]
 
 def main():
-	driver = webdriver.Chrome()
+	options = webdriver.ChromeOptions()
+	options.add_argument('headless')
+	options.add_argument('--no-sandbox')
+	driver = webdriver.Chrome(options=options)
 	driver.get("https://www.pashbar.co.il/show.php?id=378")
-	log_to_file("##STARTED RUNNING##\n")
+	log_to_file(f"##STARTED RUNNING## Time: {now}\n")
 	check(driver)
 
 def check(driver):
