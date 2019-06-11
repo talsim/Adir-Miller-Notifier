@@ -4,7 +4,7 @@ rows_selector = ".table_dates > tbody > tr"
 
 def main():
 	options = webdriver.ChromeOptions()
-	#options.add_argument('headless')
+	options.add_argument('headless')
 	options.add_argument('--no-sandbox')
 	driver = webdriver.Chrome(options=options)
 	driver.get("https://www.pashbar.co.il/show.php?id=378")
