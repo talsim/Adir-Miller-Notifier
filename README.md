@@ -1,7 +1,7 @@
 # Adir-Miler-Notifier
 sends a mail when a new show of Adir Miler has came out
 ## Getting started
-1. create a file named "old_row_count.txt" and "log.txt"
+1. run "get_old_row_count.py"
 2. change the config.py file to your details.
 ```python
 config = {
