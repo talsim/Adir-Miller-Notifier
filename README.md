@@ -12,4 +12,4 @@ config = {
 	"subject": "subject line"
 	}
 ```
- 
+ 3. set "check_show.py" to run every now and then in Task Scheduler.
