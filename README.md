@@ -1,5 +1,5 @@
-# Adir-Miler-Notifier
-sends a mail when a new show of Adir Miler has came out
+# Adir-Miller-Notifier
+sends a mail when a new show of Adir Miller has came out
 ## Getting started
 1. run "get_old_row_count.py"
 2. change the config.py file to your details.
